@@ -1,3 +1,15 @@
+<?php
+
+    session_start();
+
+    if(isset($_SESSION['user'])){
+        header("location: index_mainPage.php");
+    }
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,32 +25,28 @@
 
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form>
-                <h1>Create Account</h1>
+            <form action="php/register.user_be.php" method="POST">
+                <h1>Create Account</h1> <br><br>
                 <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
                 </div>
-                <span>or use your email for registeration</span>
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <a class="link_main">Sign Up</a>
+                <span>use your email for registeration</span>
+                <input type="text" name="username" placeholder="Enter your username" required>
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <input type="password" name="password" placeholder="Enter your password" required>
+
+                    <button  type="submit" class="link_main">Sign Up</button>
+
             </form>
         </div>
         <div class="form-container sign-in">
-            <form>
-                <h1>Sign In</h1>
-                <div class="social-icons">
-                    <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
-                </div>
-                <span>or use your email password</span>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <a href="#">Forget Your Password?</a>
+            <form action="php/login_user_be.php" method="POST">
+                <h1>Sign In</h1> <br><br>
+                <span>use your email password</span>
+                <input type="email" placeholder="Email" name="email">
+                <input type="password" placeholder="Password" name="password">
 
-                <a class="link_main" href="index_mainPage.html">
-                    Sign In
-                </a>
+                    <button  class="link_main">Sign In</button>
+
             </form>
         </div>
         <div class="toggle-container">
