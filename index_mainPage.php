@@ -13,7 +13,6 @@
         session_destroy();
         die();
     }
-    session_destroy();
 
 ?>
 
@@ -54,9 +53,10 @@
         </div>
         
         <button>Task List</button>
-        <button>Calendar</button>
         <button id="pomodoro_main">Pomodoro</button>
+        <button>Calendar</button>
         <button>Personalize</button>
+        
     </div>
 
 
@@ -68,7 +68,7 @@
 
     <div class="pomodoro-container" id="pomodoro-container_cs">
         <div class="popout-pomodoro">
-                <h1>Timer</h1>
+                <h2>Timer</h2>
             <div class="close_window_pm">
                 <i class="fa-solid fa-xmark" id="mark_pomodoro"></i>
             </div>
@@ -78,6 +78,16 @@
         <button id="pauseBtn">Pause</button>
         <button id="resetBtn">Reset</button>
     </div>
+
+
+
+    <!-- Task list -->
+
+
+
+
+
+
 
 
 
